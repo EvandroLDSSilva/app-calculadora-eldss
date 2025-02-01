@@ -20,6 +20,14 @@ class _CalculadoraState extends State<Calculadora> {
         _resultado = '';
       } else if (valor == '=') {
         _calcularResultado();
+      } else if (valor == 'dolar 💵') {
+        _expressao += '5.84';
+      } else if (valor == 'euro 💶') {
+        _expressao += '6.39';
+      } else if (valor == 'libra 💷') {
+        _expressao += '7.23';
+      } else if (valor == 'yene 💴') {
+        _expressao += '0.04';
       } else {
         _expressao += valor;
       }
@@ -82,6 +90,12 @@ class _CalculadoraState extends State<Calculadora> {
               _botao('.'),
               _botao('='),
               _botao('+'),
+              //botaos de cotaçoes de moedas no dia 01/02/24, 10:12:25.
+              //o botao deve ajudar automatizando e nao necessitando pesquisar a cotaçao das moedas desse dia
+              _botao('dolar 💵'),
+              _botao('euro 💶'),
+              _botao('libra 💷'),
+              _botao('yene 💴'),
             ],
           ),
         ),
